@@ -1,10 +1,15 @@
-# Questly - Request and Reply
-## Spletno Programiranje: Vprašanja in odgovori
-Kljub poplavi podobnih spletnih strani se je vaš prijatelj Vladko odločil, da svet potrebuje še eno spletno stran, kjer lahko ljudje postavijo vprašanja na katere jim drugi uporabniki spletne strani odgovarjajo. Seveda si je Vladko zadevo zamislil po svoje, ker pa nima pojma o spletnem programiranju, mu morate pri izvedbi pomagati vi.
+# **Questly** - Request and Reply
+*Vprašanja in odgovori - Projekt iz spletnega programiranja*
 
-Vse svoje ideje je Vladko napisal na papirnato servieto, mnenja o tem ali so na teh servieti tudi ostanki Vladkovega kosila, pa ostajajo deljena. Servieta torej pravi:
+## Opis
+**Questly** je spletna aplikacija, kjer si uporabniki izmenjujejo znanje, informacije, mnenja, itd. preko *vprašanj in odgovorov*. 
 
-+ Stran mora omogočati, da vprašanja postavimo tudi anonimno.
-+ Odgovori morajo biti nekako točkovani (I like, +1), bolje točkovani odgovori se morajo prikazati višje.
-+ Spraševalec lahko za posamezni odgovor označi ali je ta odgovor rešil njegov problem.
-+ Vsako vprašanje in odgovor je možno komentirati.
+Uporabnik lahko zastavi katerokoli vrsto vprašanj, zato **ciljna publika** ni točno definirana. Oziroma povedano drugače, **ciljno publiko** sestavlja vsak, ki bi se želel nekaj novega naučiti ali pa je naletel na težave pri svojem delu in potrebuje pomoč.
+
+Če se želimo povezati s še več uporabniki, moramo aplikacijo zasnovati tako, da bo podprta s strani več naprav. Prikaz spletne strani bo moral biti odziven *(angl. responsive)* kar pomeni, da se bo samodejno prilagodil velikosti naprave.
+
+## Minimalni izvedljiv produkt
++ Spletna stran mora omogočati, da vprašanje postavimo tudi anonimno;
++ Odgovori morajo biti nekako točkovani, bolje točkovani odgovori se morajo prikazati višje;
++ Spraševalec lahko za posamezni odgovor označi ali je ta rešil njegov problem;
++ Vsako vprašanje in odgovor nanj je možno komentirati
