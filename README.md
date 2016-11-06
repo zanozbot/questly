@@ -13,3 +13,8 @@ Uporabnik lahko zastavi katerokoli vrsto vprašanj, zato **ciljna publika** ni t
 + Odgovori morajo biti nekako točkovani, bolje točkovani odgovori se morajo prikazati višje;
 + Spraševalec lahko za posamezni odgovor označi ali je ta rešil njegov problem;
 + Vsako vprašanje in odgovor nanj je možno komentirati
+
+## Sitemap
+Za organizacijo spletišča smo uporabili hierarhično organizacijo (*docs/SITEMAP.pdf*). Takšna organizacija je bila izbrana
+zato, ker so uporabniki zelo dobro seznanjeni s hierarhičnimi diagrami in se bodo z lahkoto pomikali po spletni strani ter
+tako hitreje našli kar iščejo. Predlagana organizacija spletišča upošteva oba principa hierarhične organizacije. Hierarhična organizacija spletišča poskrbi tudi za konsistentnost, saj večina današnjih spletnih strani temelji na tej organizaciji, in tako ne zmede nove uporabnike.
