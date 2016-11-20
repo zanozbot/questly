@@ -5,11 +5,11 @@
 	<meta name="description" content="Questly | Response and Reply" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Questly | Response and Reply</title>
-	<link rel="stylesheet" type="text/css" href="home.css">
+	<link rel="stylesheet" type="text/css" href="search.css">
 </head>
 <body>
 	<header>
-		<a href="#" class="title"><span>Questly | <span class="blue">Response and Reply</span></span></a>
+		<a href="home.html" class="title"><span>Questly | <span class="blue">Response and Reply</span></span></a>
 		<nav>
 			<ul>
 				<li><a href="login.html" class="link"><span>Log in</span></span></a></li>
@@ -19,11 +19,11 @@
 		</nav>
 	</header>
 	<header class="mobile-header">
-		<a href="login.html" class="link"><span>Login</span></span></a>
-		<a href="login.html" class="link"><span>Sign up</span></span></a>
+		<a href="#" class="link"><span>Login</span></span></a>
+		<a href="#" class="link"><span>Sign up</span></span></a>
 		<a href="new.html" class="link"><span>Ask a question</span></span></a>
 	</header>
-	<!-- START: Search -->
+
 	<div class="search-header">
 		<div class="query-box">
 			<form>
@@ -32,13 +32,11 @@
 			</form>
 		</div>
 	</div>
-	<!-- END: Search -->
 
 	<div class="container">
-		<!-- START: Top Questions -->
-		<section class="top-questions">
-			<h2>Top questions</h2>
-			<!-- START: Question -->
+		<div class="results">
+			<h2>Results for: <em>car</em></h2>
+			<hr>
 			<article class="question">
 				<div class=counters>
 					<div class="sub-counter">
@@ -70,37 +68,8 @@
 					</div>
 				</div>							
 			</article>
-			<!-- END: Question -->	
-		</section>
-		<!-- END: Top Questions -->
-
-		<!-- START: New Questions -->
-		<div class="sidebar-h">
-			<div class="sidebar">
-				<h2 class="new-questions">New questions</h2>
-				<!-- START: New Question -->
-				<article class="new-question">
-					<a href="#"><div class="rating darkgrey">0</div></a>
-					<div class="nq-link-holder">
-						<a href="#" class="nq-link">Newly added question #1.</a>
-					</div>	
-				</article>
-				<!-- END: New Question -->
-
-				<!-- START: New Question -->
-				<article class="new-question">
-					<a href="#"><div class="rating green">2</div></a>
-					<div class="nq-link-holder">
-						<a href="#" class="nq-link">Newly added question #2.</a>
-					</div>				
-				</article>
-				<!-- END: New Question -->
-			</div>
-			<!-- END: New Questions -->
-		</div>		
+		</div>
 	</div>
-	<footer>
-		<strong>Questly</strong> | Response and Reply
-	</footer>
+
 </body>
 </html>
