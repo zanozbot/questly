@@ -1,5 +1,6 @@
 # **Questly** - Request and Reply
 *Vprašanja in odgovori - Projekt iz spletnega programiranja*
+Na voljo na spletni strani https://zanozbot.github.io/questly/site/*<datoteka>* , kjer ima <datoteka> eno izmed naslednjih vrednosti: *home.html, login,html, new.html, question.html, register.html, search.html, user.html*
 
 ## Opis
 **Questly** je spletna aplikacija, kjer si uporabniki izmenjujejo znanje, informacije, mnenja, itd. preko *vprašanj in odgovorov*. 
