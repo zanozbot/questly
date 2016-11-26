@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<meta name="description" content="Questly | Response and Reply" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Questly | New Response and Reply</title>
-	<link rel="stylesheet" type="text/css" href="new.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/new.css">
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 	<header>
 		<a href="home.html" class="title"><span>Questly | <span class="blue">Response and Reply</span></span></a>
 		<nav>
 			<ul>
-				<li><a href="login.html" class="link"><span>Log in</span></span></a></li>
-				<li><a href="login.html" class="link"><span>Sign up</span></span></a></li>
+				<li><a href="login.html" class="link"><span>Log in</span></a></li>
+				<li><a href="login.html" class="link"><span>Sign up</span></a></li>
 			</ul>
 		</nav>
 	</header>
 	<header class="mobile-header">
-		<a href="login.html" class="link"><span>Login</span></span></a>
-		<a href="login.html" class="link"><span>Sign up</span></span></a>
+		<a href="login.html" class="link"><span>Login</span></a>
+		<a href="login.html" class="link"><span>Sign up</span></a>
 	</header>
 
 	<div class="container">
@@ -27,10 +29,19 @@
 			<h2>New Question</h2>
 			<hr>
 			<form>
-				<label>Title: <input type="text" name="title" placeholder="What's your question?. Be specific." autocomplete="off" maxlength="200" required="true"></label>
-				<textarea name="answer"></textarea>
+				<label>Title: <input type="text" name="title" placeholder="What's your question?. Be specific." autocomplete="off" maxlength="200" required></label>
+				<div class="addons">
+					<span id="link">link</span>
+					<span id="code">code</span>
+				</div>
+				<textarea id="area" name="answer" required></textarea>
 				<input type="submit" value="Post your question">
 			</form>
+			<h2>Question Preview</h2>
+			<hr>
+			<div id="preview">
+
+			</div>
 		</div>
 	</div>
 

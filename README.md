@@ -18,3 +18,11 @@ Uporabnik lahko zastavi katerokoli vrsto vprašanj, zato **ciljna publika** ni t
 Za organizacijo spletišča smo uporabili hierarhično organizacijo (*docs/SITEMAP.pdf*). Takšna organizacija je bila izbrana
 zato, ker so uporabniki zelo dobro seznanjeni s hierarhičnimi diagrami in se bodo z lahkoto pomikali po spletni strani ter
 tako hitreje našli kar iščejo. Predlagana organizacija spletišča upošteva oba principa hierarhične organizacije. Hierarhična organizacija spletišča poskrbi tudi za konsistentnost, saj večina današnjih spletnih strani temelji na tej organizaciji, in tako ne zmede nove uporabnike.
+
+## Poročilo o težavah v različnih brskalnikih
+Brskalnik Microsoft Edge drugače prikaže mobilno glavo (*angl. header*), vendar ne pokvari izgleda spletne strani.
+
+## Zmogljivosti in posebni gradniki spletne strani
+* Na straneh *new.html* in *question.html* lahko poleg navadnega besedila dodajamo povezave in kodo, ki se v predogledu dinamično obarvajo.
+![Dinamično polje](https://raw.githubusercontent.com/zanozbot/questly/master/gifs/dynamicfield.gif)
+* Validacija vnosa registracijskega polja za geslo na strani odjemalca, ki se nahaja na strani *registration.html*

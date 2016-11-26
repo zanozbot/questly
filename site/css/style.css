@@ -1,4 +1,4 @@
-html, body, div, .search-header, h2, h1 {
+html, body, div, h2, h1 {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -19,7 +19,6 @@ header {
 	background: #242729;
 	height: 40px;
 	line-height: 1;
-	z-index: 2;
 	font-size: 13px;
 }
 footer {
@@ -41,7 +40,7 @@ nav {
 	right: 0;
 	top: 0;
 }
-.title, .link, .query-box, .search-submit, .search-input {
+.title, .link {
 	vertical-align: middle;
 	text-decoration: none;
     display: table-cell;
@@ -65,17 +64,40 @@ nav {
     padding: 0 10px;
     color: lightgrey;
 }
+.container {
+	margin: 0 auto;
+	flex-grow: 1;
+}
+.mobile-header {
+	background: #242729;
+	padding-top: 10px;
+	margin-bottom: -30px;
+	z-index: 1;
+	height: auto;
+	text-align: center;
+	display: none;
+	flex-direction: column;
+}
+.mobile-header span{
+	padding: 10px;
+}
+.query-box, .search-submit, .search-input {
+	vertical-align: middle;
+	text-decoration: none;
+    /*display: table-cell;*/
+    height: 40px;
+}
 .search-header {
 	background: #242729;
 	display: table;	
 	height: 150px;
 	width: 100%;
 	text-align: center;
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 .query-box {
-	/*background-size: 40px 40px;
-    background-image: linear-gradient(to right, #2d8bd6 1px, transparent 1px), linear-gradient(to bottom, #2d8bd6 1px, transparent 1px);
-    background-position: -5px -5px;*/
     height: 150px;
 }
 .search-input {
@@ -88,6 +110,11 @@ nav {
 	z-index: 10;
 	padding: 5px 60px 5px 10px;
 	font-size: 20px;
+}
+.query-box > form {
+	display: inline-block;
+	text-align: center;
+	margin-top: 40px;
 }
 .search-submit {
 	border-radius: 0 10px 10px 0;
@@ -103,13 +130,8 @@ nav {
 .search-submit:hover {
 	background: #2677b7;
 }
-.container {
-	min-width: 960px;
-	display: flex;
-	margin: 0 auto;
-	flex-grow: 1;
-}
-.top-questions > h2, .results > h2 {
+.top-questions > h2, .results > h2, 
+.new-question > h2, .login > h2, .signup > h2 {
 	color: #242729;
     font-size: 18px;
     font-weight: 400;
@@ -138,11 +160,6 @@ nav {
     text-align: center;
 }
 .number > div { font-size: 13px; }
-.q-about {
-	min-width: 750px;
-    padding: 0;
-    float: left;
-}
 .q-link {
 	text-decoration: none;
 	color: #2f96e8;
@@ -171,9 +188,7 @@ nav {
 	text-decoration: none;
 }
 .rating {
-	margin-right: 10px;
 	padding: 3px 0;
-	float: left;
     white-space: nowrap;
     width: 40px;
     color: #fff;
@@ -197,57 +212,15 @@ nav {
 	margin-right: 10px;
 	color: white;
 }
-.mobile-header {
-	background: #242729;
-	padding-top: 10px;
-	margin-bottom: -30px;
-	z-index: 1;
-	height: auto;
-	text-align: center;
-	display: none;
-	flex-direction: column;
+#preview a {
+	text-decoration: none;
+	color: #2f96e8;
 }
-.mobile-header span{
-	padding: 10px;
+code, .code {
+	display: block;
+	background: lightgray;
+	padding: 5px;
 }
-.results {width: 100%;}
-hr {
-	opacity: 0.2;
-	margin-top: -10px;
-	margin-bottom: 10px;
-}
-@media screen and (max-width: 960px) {
-	.container {
-		min-width: auto;
-	}
-	.score {display: block;}
-	.q-about {
-		min-width: 400px;
-	}
-	.q-details {
-		float: left;
-    	width: 400px;
-	}
-	.counters {display: none;}
-}
-@media screen and (max-width: 640px) {
-	.mobile-header {display: flex;}
-	nav {display: none;}
-	.q-about {width: auto; min-width: auto;}
-	.q-details {
-    	width: 200px;
-	}
-	.search-input {
-		width: 100px;
-		height: 20px;
-		font-size: 15px;
-		padding: 5px 6px 5px 10px;
-	}
-	.search-submit {
-		height: 30px;
-		font-size: 15px;
-	}
-	.search-header, .query-box {
-		height: 100px;
-	}
+code > p, .code > p {
+	line-height: 0.1;
 }

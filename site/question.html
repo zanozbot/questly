@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<meta name="description" content="Questly | How to clean your car?" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Questly | How to clean your car?</title>
-	<link rel="stylesheet" type="text/css" href="question.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/question.css">
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 	<header>
 		<a href="home.html" class="title"><span>Questly | <span class="blue">Response and Reply</span></span></a>
 		<nav>
 			<ul>
-				<li><a href="login.html" class="link"><span>Log in</span></span></a></li>
-				<li><a href="login.html" class="link"><span>Sign up</span></span></a></li>
-				<li><a href="new.html" class="link"><span>Ask a question</span></span></a></li>
+				<li><a href="login.html" class="link"><span>Log in</span></a></li>
+				<li><a href="login.html" class="link"><span>Sign up</span></a></li>
+				<li><a href="new.html" class="link"><span>Ask a question</span></a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<header class="mobile-header">
-		<a href="login.html" class="link"><span>Login</span></span></a>
-		<a href="login.html" class="link"><span>Sign up</span></span></a>
-		<a href="new.html" class="link"><span>Ask a question</span></span></a>
+		<a href="login.html" class="link"><span>Login</span></a>
+		<a href="login.html" class="link"><span>Sign up</span></a>
+		<a href="new.html" class="link"><span>Ask a question</span></a>
 	</header>
 
 	<div class="container">
@@ -77,9 +79,18 @@
 			<div class="q-header">
 				<h2>Your answer</h2>
 				<form>
-					<textarea name="answer"></textarea>
+					<div class="addons">
+						<span id="link">link</span>
+						<span id="code">code</span>
+					</div>
+					<textarea id="area" name="answer" required></textarea>
 					<input type="submit" value="Post your reply">
 				</form>
+				<h2 id="q-preview">Question Preview</h2>
+				<hr>
+				<div id="preview">
+
+				</div>
 			</div>
 		</div>
 	</div>

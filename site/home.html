@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<meta name="description" content="Questly | Response and Reply" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Questly | Response and Reply</title>
-	<link rel="stylesheet" type="text/css" href="home.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 <body>
 	<header>
 		<a href="#" class="title"><span>Questly | <span class="blue">Response and Reply</span></span></a>
 		<nav>
 			<ul>
-				<li><a href="login.html" class="link"><span>Log in</span></span></a></li>
-				<li><a href="login.html" class="link"><span>Sign up</span></span></a></li>
-				<li><a href="new.html" class="link"><span>Ask a question</span></span></a></li>
+				<li><a href="login.html" class="link"><span>Log in</span></a></li>
+				<li><a href="login.html" class="link"><span>Sign up</span></a></li>
+				<li><a href="new.html" class="link"><span>Ask a question</span></a></li>
 			</ul>
 		</nav>
 	</header>
 	<header class="mobile-header">
-		<a href="login.html" class="link"><span>Login</span></span></a>
-		<a href="login.html" class="link"><span>Sign up</span></span></a>
-		<a href="new.html" class="link"><span>Ask a question</span></span></a>
+		<a href="login.html" class="link"><span>Login</span></a>
+		<a href="login.html" class="link"><span>Sign up</span></a>
+		<a href="new.html" class="link"><span>Ask a question</span></a>
 	</header>
 	<!-- START: Search -->
 	<div class="search-header">
 		<div class="query-box">
 			<form>
-				<input class="search-input" type="text" name="query" placeholder="Search..." autocomplete="off" maxlength="200" required="true">
+				<input class="search-input" type="text" name="query" placeholder="Search..." autocomplete="off" maxlength="200" required>
 				<button type="submit" class="search-submit">Search</button>
 			</form>
 		</div>
@@ -39,7 +40,7 @@
 		<section class="top-questions">
 			<h2>Top questions</h2>
 			<!-- START: Question -->
-			<article class="question">
+			<div class="question">
 				<div class=counters>
 					<div class="sub-counter">
 						<div class="number">
@@ -69,7 +70,7 @@
 						</div>
 					</div>
 				</div>							
-			</article>
+			</div>
 			<!-- END: Question -->	
 		</section>
 		<!-- END: Top Questions -->
@@ -79,21 +80,21 @@
 			<div class="sidebar">
 				<h2 class="new-questions">New questions</h2>
 				<!-- START: New Question -->
-				<article class="new-question">
+				<div class="new-question">
 					<a href="#"><div class="rating darkgrey">0</div></a>
 					<div class="nq-link-holder">
 						<a href="#" class="nq-link">Newly added question #1.</a>
 					</div>	
-				</article>
+				</div>
 				<!-- END: New Question -->
 
 				<!-- START: New Question -->
-				<article class="new-question">
+				<div class="new-question">
 					<a href="#"><div class="rating green">2</div></a>
 					<div class="nq-link-holder">
 						<a href="#" class="nq-link">Newly added question #2.</a>
 					</div>				
-				</article>
+				</div>
 				<!-- END: New Question -->
 			</div>
 			<!-- END: New Questions -->
