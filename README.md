@@ -28,3 +28,6 @@ Brskalnik Microsoft Edge drugače prikaže mobilno glavo (*angl. header*), venda
 * Na straneh *new.html* in *question.html* lahko poleg navadnega besedila dodajamo povezave in kodo, ki se v predogledu dinamično obarvajo.
 ![Dinamično polje](https://raw.githubusercontent.com/zanozbot/questly/master/gifs/dynamicfield.gif)
 * Validacija vnosa registracijskega polja za geslo na strani odjemalca, ki se nahaja na strani *registration.html*
+
+## Izbira orodja za strežniški del
+Za zaledni del je bilo izbrano orodje [Laravel](https://laravel.com/), ki temelji na jeziku PHP.
