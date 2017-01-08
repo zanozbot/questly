@@ -1,0 +1,65 @@
+.container {
+	min-width: 960px;
+	display: flex;
+	flex-direction: column;
+}
+.my-questions > h2 {
+	color: #242729;
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+.question {
+	clear: left;
+}
+.q-about {
+	min-width: 750px;
+    padding: 0;
+    float: left;
+}
+hr {
+	margin-top: -10px;
+	opacity: 0.2;
+}
+.card {	
+	border: solid 1px lightgrey;
+	text-align: center;
+	padding: 10px;
+	margin-top: 20px;
+}
+.avatar { 
+    border-radius: 50%;
+}
+.name {
+	padding-top: 5px;
+	clear: left;
+}
+.skill {
+	font-weight: 300;
+}
+.mobile-header {
+	margin-bottom: 0px;
+}
+@media screen and (max-width: 960px) {
+	.container {
+		min-width: auto;
+	}
+	.score {display: block;}
+	.q-about {
+		min-width: 400px;
+	}
+	.q-details {
+		float: left;
+    	width: 400px;
+	}
+	.counters {display: none;}
+}
+@media screen and (max-width: 640px) {
+	.mobile-header {display: flex;}
+	nav {display: none;}
+	.q-about {width: auto; min-width: auto;}
+	.q-details {
+    	width: 200px;
+	}
+}

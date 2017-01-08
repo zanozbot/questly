@@ -1,0 +1,59 @@
+.container {
+	display: flex;
+}
+.login, .signup {
+    max-width: 640px;
+	padding: 0 10px;
+}
+#constraints {
+    padding: 10px;
+    margin-top: -10px;
+    background: lightgrey;
+}
+input[type=email], select, input[type=password],
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+hr {
+	opacity: 0.2;
+	margin-top: -20px;
+	margin-bottom: 20px;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #2f96e8;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+	background-color: #2677b7;
+}
+label {
+	font-size: 15px;
+}
+form {
+    border: 1px solid lightgrey;
+    padding: 20px;
+}
+.no-account {
+    text-align: center;
+}
+.no-account > a {
+    text-decoration: none;
+    color: #2f96e8;
+}
+@media screen and (max-width: 640px) {
+	nav {display: none;}
+	.mobile-header {display: flex;}
+	.container {margin-top: 10px;}
+}
