@@ -18,6 +18,11 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+    /**
+    * Validates user input, checks for password
+    * match, creates the user and logs the newly
+    * created user in
+    */
     public function postSignup(Request $req) {
         
         $this->validate($req, [
@@ -49,6 +54,11 @@ class UserController extends Controller
         return redirect()->route('index');
     }
     
+    /**
+    * Validates user input, attemps to log the user 
+    * in, if he has a role of admin, he is automatically
+    * redirected to admin panel
+    */
     public function postLogin(Request $req) {
         $this->validate($req, [
             'email' => 'email|required',
@@ -69,6 +79,10 @@ class UserController extends Controller
                 ->withInput();;
     }
     
+    /**
+    * If the user is already logged in, he
+    * is redirected back to index
+    */
     public function register() {
         if(Auth::check()) {
             return redirect()->route('index');
@@ -77,6 +91,10 @@ class UserController extends Controller
         }
     }
     
+    /**
+    * If the user is already logged in, he
+    * is redirected back to index
+    */
     public function login() {
         if(Auth::check()) {
             return redirect()->route('index');
@@ -85,6 +103,9 @@ class UserController extends Controller
         }
     }
     
+    /**
+    * Log outs the user
+    */
     public function logout() {
         if(Auth::check()) {
             Auth::logout();
@@ -92,6 +113,10 @@ class UserController extends Controller
         return redirect()->back();
     }
     
+    /**
+    * Gets the user from database and all his 
+    * questions and answered questions
+    */
     public function user($uid) {
         $user = User::find($uid);
         
@@ -108,6 +133,10 @@ class UserController extends Controller
         return redirect()->back();
     }
     
+    /**
+    * Returns all questions in the database,
+    * for admin to review them
+    */
     public function admin() {
         return View::make('admin')->with('questions', Question::all());
     }

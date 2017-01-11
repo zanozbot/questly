@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\View;
 
 class CommentController extends Controller
 {
+    /**
+    * Validates user input, adds relations to the 
+    * comment, saves it and redirects back
+    */
     public function createNewComment(Request $req) {
         $this->validate($req, [
             'comment' => 'required'

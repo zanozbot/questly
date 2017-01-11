@@ -22,6 +22,11 @@ use Illuminate\Support\Facades\View;
 
 class QuestionController extends Controller
 {
+    /**
+    * Validates user input, creates new question,
+    * checks if user is logged in, saves the question
+    * and redirects to the newly created question
+    */
     public function createNewQuestion(Request $req) {
         $this->validate($req, [
             'title' => 'required|max:128',
@@ -40,6 +45,10 @@ class QuestionController extends Controller
         return redirect()->route('question', ['qid' => $question->qid]);
     }
     
+    /**
+    * Finds the question and deletes it
+    * from the database
+    */
     public function delete($qid) {
         $question = Question::find($qid);
         if($question) {
@@ -49,6 +58,12 @@ class QuestionController extends Controller
         return redirect()->back();
     }
     
+    /**
+    * Gets an instance of Arkanite - data parser,
+    * Gets the question and all its corresponding
+    * comments, answers and answers comments,
+    * Increases questions views
+    */
     public function question($qid) {
         $arkanite = new Arkanite();
         
@@ -68,6 +83,8 @@ class QuestionController extends Controller
                 if($answer->uid) {
                     $username = User::find($answer->uid)->username;
                 }
+                
+                // Sets an user attribute
                 $answer->setAttribute('username', $username);
                 $answer->content = $arkanite->parse($answer->content);
             }
@@ -87,25 +104,33 @@ class QuestionController extends Controller
         return redirect()->back();
     }
     
+    /**
+    * Finds all questions with the searched
+    * values
+    */
     public function search(Request $req) {
         if(empty($req->query('query'))) {
             return redirect()->back();
         }
         
-        // split on 1+ whitespace & ignore empty (eg. trailing space)
+        // Split on 1+ whitespace & ignore empty (eg. trailing space)
         $searchValues = preg_split('/\s+/', $req->query('query'), -1, PREG_SPLIT_NO_EMPTY);
         
         $questions = Question::where(function ($q) use ($searchValues) {
           foreach ($searchValues as $value) {
             $q->orWhere('title', 'like', "%{$value}%");
           }
-        })->take(5)->get();
+        })->take(10)->get();
         
         return View::make('search')
                     ->with('questions', $questions)
                     ->with('query', $req->query('query'));
     }
     
+    /**
+    * Returns a view populated with top
+    * and new questions
+    */
     public function index() {
         $top = Question::all()
                         ->sortByDesc("votes")
@@ -120,16 +145,25 @@ class QuestionController extends Controller
                     ->with('new', $new);
     }
     
+    /**
+    * Calls vote method and redirects back
+    */
     public function upvote($qid) {
         $this->vote($qid, true);
         return redirect()->back();
     }
     
+    /**
+    * Calls vote method and redirects back
+    */
     public function downvote($qid) {
-        vote($qid, false);
+        $this->vote($qid, false);
         return redirect()->back();
     }
     
+    /**
+    * Gets the question and adds or subtracts a vote
+    */
     private function vote($qid, $add) {
         $question = Question::find($qid);
         if($question) {

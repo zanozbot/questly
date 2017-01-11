@@ -14,13 +14,13 @@ class CreateAnswersTable extends Migration {
 	{
 		Schema::create('answers', function(Blueprint $table)
 		{
-			$table->integer('aid', true);
+			$table->integer('aid');
 			$table->integer('uid')->nullable()->index('uid_idx');
 			$table->integer('qid')->index('qid_idx');
 			$table->integer('votes')->default(0);
 			$table->text('content', 65535);
 			$table->dateTime('timestamp');
-			$table->primary(['aid','qid']);
+			$table->primary(['aid', 'qid']);
 		});
 	}
 
