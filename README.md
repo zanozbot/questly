@@ -1,4 +1,7 @@
 # **Questly** - Request and Reply
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 *Vprašanja in odgovori - Projekt iz spletnega programiranja*
 
 Na voljo na spletni strani [https://zanozbot.github.io/questly/site/>datoteka<](https://zanozbot.github.io/questly/site/home.html), kjer ima >datoteka< eno izmed naslednjih vrednosti: *home.html, login,html, new.html, question.html, register.html, search.html, user.html*
